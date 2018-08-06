@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script type="text/javascript" src="./live2d/script.js"></script>
+    <title>Blog4U</title>
+    <style>
+        #live2dcanvas {
+          position: fixed;
+          right: 0px;
+          z-index: 999999999999;
+          pointer-events: none;
+          bottom: 60px;
+        }
+        .weather { background: url(./images/weather_bg.jpg) no-repeat; height: 88px; margin: 20px 0;padding: 20px 0 0 75px; }
+      </style>
+  </head>
+  <body>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>
+    <div id="app"></div>
+  </body>
+  <script>loadlive2d("live2dcanvas" ,"./live2d/assets/z16/z16.model.json",0.5)</script>
+</html>
